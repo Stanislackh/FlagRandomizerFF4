@@ -59,6 +59,7 @@
     <Compile Include="FlagsPreset.cs" />
     <Compile Include="MainViewModel.cs" />
     <Compile Include="PropChanged.cs" />
+    <Compile Include="RandomizerMethods.cs" />
     <Compile Include="RelayCommand.cs" />
     <Compile Include="Sprites.cs" />
     <Compile Include="SpritesUC.xaml.cs">

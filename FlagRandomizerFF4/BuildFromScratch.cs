@@ -213,9 +213,8 @@ namespace FlagRandomizerFF4
         //Les boss
         public static Dictionary<int, string> DicoBossWyvern { get; } = new Dictionary<int, string>()
         {
-            {1,"" },
-            {2,"whyburn" },
-            {3,"whichburn" }
+            {1,"whyburn" },
+            {2,"whichburn" }
 
         };
 

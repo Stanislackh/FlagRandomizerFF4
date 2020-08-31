@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Automation.Peers;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
@@ -21,10 +22,13 @@ namespace FlagRandomizerFF4
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        private RandomizerMethods blapblap = new RandomizerMethods();
         public MainWindow()
         {
             InitializeComponent();
             this.DataContext = new MainViewModel();
+
         }
 
         private void Randomize_Click(object sender, RoutedEventArgs e)
@@ -35,8 +39,7 @@ namespace FlagRandomizerFF4
         private void GoSite_Click(object sender, RoutedEventArgs e)
         {
             //Il faut récup l'item de la combobox pour le Preset
-            Clipboard.SetText("clipboard");
-            Process.Start("http://ff4fe.com/make");
+            blapblap.ScratchFlag();
         }
     }
 }
