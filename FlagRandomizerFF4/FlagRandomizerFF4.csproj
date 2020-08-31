@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6E70C427-C34C-4832-AD4C-8A52658F78C7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FlagRandomizerFF4</RootNamespace>
+    <AssemblyName>FlagRandomizerFF4</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="BuildFromScratch.cs" />
+    <Compile Include="FlagsPreset.cs" />
+    <Compile Include="MainViewModel.cs" />
+    <Compile Include="PropChanged.cs" />
+    <Compile Include="RelayCommand.cs" />
+    <Compile Include="Sprites.cs" />
+    <Compile Include="SpritesUC.xaml.cs">
+      <DependentUpon>SpritesUC.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="SpritesUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\FFIVFE-Bosses-19Golbez-Color.png" />
+    <Resource Include="images\FFIVFE-Bosses-1MistD-Color.png" />
+    <Resource Include="images\FFIVFE-Bosses-36Zeromus-Color.png" />
+    <Resource Include="images\FFIVFE-Characters-11Edge-Active.png" />
+    <Resource Include="images\FFIVFE-Characters-12FuSoYa-Active.png" />
+    <Resource Include="images\FFIVFE-Characters-1DKCecil-Active.png" />
+    <Resource Include="images\FFIVFE-Characters-2Kain-Active.png" />
+    <Resource Include="images\FFIVFE-Characters-3CRydia-Active.png" />
+    <Resource Include="images\FFIVFE-Characters-4Tellah-Active.png" />
+    <Resource Include="images\FFIVFE-Characters-5Edward-Active.png" />
+    <Resource Include="images\FFIVFE-Characters-6Rosa-Active.png" />
+    <Resource Include="images\FFIVFE-Characters-8Porom-Active.png" />
+    <Resource Include="images\timeHasCome.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\FFIVFE-Bosses-10DKCecil-Color.png" />
+    <Resource Include="images\FFIVFE-Bosses-10DKCecil-Gray.png" />
+    <Resource Include="images\FFIVFE-Bosses-11Guards-Color.png" />
+    <Resource Include="images\FFIVFE-Bosses-11Guards-Gray.png" />
+    <Resource Include="images\FFIVFE-Bosses-12Yang-Color.png" />
+    <Resource Include="images\FFIVFE-Bosses-12Yang-Gray.png" />
+    <Resource Include="images\FFIVFE-Bosses-13Baigan-Color.png" />
+    <Resource Include="images\FFIVFE-Bosses-13Baigan-Gray.png" />
+    <Resource Include="images\FFIVFE-Bosses-14Kainazzo-Color.png" />
+    <Resource Include="images\FFIVFE-Bosses-14Kainazzo-Gray.png" />
+    <Resource Include="images\FFIVFE-Bosses-15DElf-Color.png" />
+    <Resource Include="images\FFIVFE-Bosses-15DElf-Gray.png" />
+    <Resource Include="images\FFIVFE-Bosses-16MagusSis-Color.png" />
+    <Resource Include="images\FFIVFE-Bosses-16MagusSis-Gray.png" />
+    <Resource Include="images\FFIVFE-Bosses-17Valvalis-Color.png" />
+    <Resource Include="images\FFIVFE-Bosses-17Valvalis-Gray.png" />
+    <Resource Include="images\FFIVFE-Bosses-18Calcabrina-Color.png" />
+    <Resource Include="images\FFIVFE-Bosses-18Calcabrina-Gray.png" />
+    <Resource Include="images\FFIVFE-Bosses-19Golbez-Gray.png" />
+    <Resource Include="images\FFIVFE-Bosses-1MistD-Gray.png" />
+    <Resource Include="images\FFIVFE-Bosses-20Lugae-Color.png" />
+    <Resource Include="images\FFIVFE-Bosses-20Lugae-Gray.png" />
+    <Resource Include="images\FFIVFE-Bosses-21Eblan-Color.png" />
+    <Resource Include="images\FFIVFE-Bosses-21Eblan-Gray.png" />
+    <Resource Include="images\FFIVFE-Bosses-22Rubicante-Color.png" />
+    <Resource Include="images\FFIVFE-Bosses-22Rubicante-Gray.png" />
+    <Resource Include="images\FFIVFE-Bosses-23EvilWall-Color.png" />
+    <Resource Include="images\FFIVFE-Bosses-23EvilWall-Gray.png" />
+    <Resource Include="images\FFIVFE-Bosses-24Fiends-Color.png" />
+    <Resource Include="images\FFIVFE-Bosses-24Fiends-Gray.png" />
+    <Resource Include="images\FFIVFE-Bosses-25CPU-Color.png" />
+    <Resource Include="images\FFIVFE-Bosses-25CPU-Gray.png" />
+    <Resource Include="images\FFIVFE-Bosses-26Odin-Color.png" />
+    <Resource Include="images\FFIVFE-Bosses-26Odin-Gray.png" />
+    <Resource Include="images\FFIVFE-Bosses-27Asura-Color.png" />
+    <Resource Include="images\FFIVFE-Bosses-27Asura-Gray.png" />
+    <Resource Include="images\FFIVFE-Bosses-28Leviath-Color.png" />
+    <Resource Include="images\FFIVFE-Bosses-28Leviath-Gray.png" />
+    <Resource Include="images\FFIVFE-Bosses-29Bahamut-Color.png" />
+    <Resource Include="images\FFIVFE-Bosses-29Bahamut-Gray.png" />
+    <Resource Include="images\FFIVFE-Bosses-2Soldier-Color.png" />
+    <Resource Include="images\FFIVFE-Bosses-2Soldier-Gray.png" />
+    <Resource Include="images\FFIVFE-Bosses-30PaleDim-Color.png" />
+    <Resource Include="images\FFIVFE-Bosses-30PaleDim-Gray.png" />
+    <Resource Include="images\FFIVFE-Bosses-31LunarD-Color.png" />
+    <Resource Include="images\FFIVFE-Bosses-31LunarD-Gray.png" />
+    <Resource Include="images\FFIVFE-Bosses-32Plague-Color.png" />
+    <Resource Include="images\FFIVFE-Bosses-32Plague-Gray.png" />
+    <Resource Include="images\FFIVFE-Bosses-33Ogopogo-Color.png" />
+    <Resource Include="images\FFIVFE-Bosses-33Ogopogo-Gray.png" />
+    <Resource Include="images\FFIVFE-Bosses-34Wyvern-Color.png" />
+    <Resource Include="images\FFIVFE-Bosses-34Wyvern-Gray.png" />
+    <Resource Include="images\FFIVFE-Bosses-35DarkImps-Color.png" />
+    <Resource Include="images\FFIVFE-Bosses-35DarkImps-Gray.png" />
+    <Resource Include="images\FFIVFE-Bosses-36Zeromus-Gray.png" />
+    <Resource Include="images\FFIVFE-Bosses-3Octo-Color.png" />
+    <Resource Include="images\FFIVFE-Bosses-3Octo-Gray.png" />
+    <Resource Include="images\FFIVFE-Bosses-4Antlion-Color.png" />
+    <Resource Include="images\FFIVFE-Bosses-4Antlion-Gray.png" />
+    <Resource Include="images\FFIVFE-Bosses-5WHag-Color.png" />
+    <Resource Include="images\FFIVFE-Bosses-5WHag-Gray.png" />
+    <Resource Include="images\FFIVFE-Bosses-6Mombomb-Color.png" />
+    <Resource Include="images\FFIVFE-Bosses-6Mombomb-Gray.png" />
+    <Resource Include="images\FFIVFE-Bosses-7Gauntlet-Color.png" />
+    <Resource Include="images\FFIVFE-Bosses-7Gauntlet-Gray.png" />
+    <Resource Include="images\FFIVFE-Bosses-8Milon-Color.png" />
+    <Resource Include="images\FFIVFE-Bosses-8Milon-Gray.png" />
+    <Resource Include="images\FFIVFE-Bosses-9MilonZ-Color.png" />
+    <Resource Include="images\FFIVFE-Bosses-9MilonZ-Gray.png" />
+    <Resource Include="images\FFIVFE-Characters-10Cid-Active.png" />
+    <Resource Include="images\FFIVFE-Characters-10Cid-Inactive.png" />
+    <Resource Include="images\FFIVFE-Characters-10Cid-Rejected.png" />
+    <Resource Include="images\FFIVFE-Characters-11Edge-Inactive.png" />
+    <Resource Include="images\FFIVFE-Characters-11Edge-Rejected.png" />
+    <Resource Include="images\FFIVFE-Characters-12FuSoYa-Inactive.png" />
+    <Resource Include="images\FFIVFE-Characters-12FuSoYa-Rejected.png" />
+    <Resource Include="images\FFIVFE-Characters-1Cecil-Active.png" />
+    <Resource Include="images\FFIVFE-Characters-1Cecil-Inactive.png" />
+    <Resource Include="images\FFIVFE-Characters-1Cecil-Rejected.png" />
+    <Resource Include="images\FFIVFE-Characters-1DKCecil-Inactive.png" />
+    <Resource Include="images\FFIVFE-Characters-1DKCecil-Rejected.png" />
+    <Resource Include="images\FFIVFE-Characters-2Kain-Inactive.png" />
+    <Resource Include="images\FFIVFE-Characters-2Kain-Rejected.png" />
+    <Resource Include="images\FFIVFE-Characters-3CRydia-Inactive.png" />
+    <Resource Include="images\FFIVFE-Characters-3CRydia-Rejected.png" />
+    <Resource Include="images\FFIVFE-Characters-3Rydia-Active.png" />
+    <Resource Include="images\FFIVFE-Characters-3Rydia-Inactive.png" />
+    <Resource Include="images\FFIVFE-Characters-3Rydia-Rejected.png" />
+    <Resource Include="images\FFIVFE-Characters-4Tellah-Inactive.png" />
+    <Resource Include="images\FFIVFE-Characters-4Tellah-Rejected.png" />
+    <Resource Include="images\FFIVFE-Characters-5Edward-Inactive.png" />
+    <Resource Include="images\FFIVFE-Characters-5Edward-Rejected.png" />
+    <Resource Include="images\FFIVFE-Characters-6Rosa-Inactive.png" />
+    <Resource Include="images\FFIVFE-Characters-6Rosa-Rejected.png" />
+    <Resource Include="images\FFIVFE-Characters-7Yang-Active.png" />
+    <Resource Include="images\FFIVFE-Characters-7Yang-Inactive.png" />
+    <Resource Include="images\FFIVFE-Characters-7Yang-Rejected.png" />
+    <Resource Include="images\FFIVFE-Characters-8Porom-Inactive.png" />
+    <Resource Include="images\FFIVFE-Characters-8Porom-Rejected.png" />
+    <Resource Include="images\FFIVFE-Characters-9Palom-Active.png" />
+    <Resource Include="images\FFIVFE-Characters-9Palom-Inactive.png" />
+    <Resource Include="images\FFIVFE-Characters-9Palom-Rejected.png" />
+    <Resource Include="images\FFIVFE-Icons-10MagmaKey-Check.png" />
+    <Resource Include="images\FFIVFE-Icons-10MagmaKey-Color.png" />
+    <Resource Include="images\FFIVFE-Icons-10MagmaKey-Gray.png" />
+    <Resource Include="images\FFIVFE-Icons-11TowerKey-Check.png" />
+    <Resource Include="images\FFIVFE-Icons-11TowerKey-Color.png" />
+    <Resource Include="images\FFIVFE-Icons-11TowerKey-Gray.png" />
+    <Resource Include="images\FFIVFE-Icons-12LucaKey-Check.png" />
+    <Resource Include="images\FFIVFE-Icons-12LucaKey-Color.png" />
+    <Resource Include="images\FFIVFE-Icons-12LucaKey-Gray.png" />
+    <Resource Include="images\FFIVFE-Icons-13Adamant-Check.png" />
+    <Resource Include="images\FFIVFE-Icons-13Adamant-Color.png" />
+    <Resource Include="images\FFIVFE-Icons-13Adamant-Gray.png" />
+    <Resource Include="images\FFIVFE-Icons-14LegendSword-Check.png" />
+    <Resource Include="images\FFIVFE-Icons-14LegendSword-Color.png" />
+    <Resource Include="images\FFIVFE-Icons-14LegendSword-Gray.png" />
+    <Resource Include="images\FFIVFE-Icons-15Pan-Check.png" />
+    <Resource Include="images\FFIVFE-Icons-15Pan-Color.png" />
+    <Resource Include="images\FFIVFE-Icons-15Pan-Gray.png" />
+    <Resource Include="images\FFIVFE-Icons-16Spoon-Check.png" />
+    <Resource Include="images\FFIVFE-Icons-16Spoon-Color.png" />
+    <Resource Include="images\FFIVFE-Icons-16Spoon-Gray.png" />
+    <Resource Include="images\FFIVFE-Icons-17RatTail-Check.png" />
+    <Resource Include="images\FFIVFE-Icons-17RatTail-Color.png" />
+    <Resource Include="images\FFIVFE-Icons-17RatTail-Gray.png" />
+    <Resource Include="images\FFIVFE-Icons-18PinkTail-Check.png" />
+    <Resource Include="images\FFIVFE-Icons-18PinkTail-Color.png" />
+    <Resource Include="images\FFIVFE-Icons-18PinkTail-Gray.png" />
+    <Resource Include="images\FFIVFE-Icons-1THECrystal-Check.png" />
+    <Resource Include="images\FFIVFE-Icons-1THECrystal-Color.png" />
+    <Resource Include="images\FFIVFE-Icons-1THECrystal-Gray.png" />
+    <Resource Include="images\FFIVFE-Icons-2Pass-Check.png" />
+    <Resource Include="images\FFIVFE-Icons-2Pass-Color.png" />
+    <Resource Include="images\FFIVFE-Icons-2Pass-Gray.png" />
+    <Resource Include="images\FFIVFE-Icons-3Hook-Check.png" />
+    <Resource Include="images\FFIVFE-Icons-3Hook-Color.png" />
+    <Resource Include="images\FFIVFE-Icons-3Hook-Gray.png" />
+    <Resource Include="images\FFIVFE-Icons-4DarkCrystal-Check.png" />
+    <Resource Include="images\FFIVFE-Icons-4DarkCrystal-Color.png" />
+    <Resource Include="images\FFIVFE-Icons-4DarkCrystal-Gray.png" />
+    <Resource Include="images\FFIVFE-Icons-5EarthCrystal-Check.png" />
+    <Resource Include="images\FFIVFE-Icons-5EarthCrystal-Color.png" />
+    <Resource Include="images\FFIVFE-Icons-5EarthCrystal-Gray.png" />
+    <Resource Include="images\FFIVFE-Icons-6TwinHarp-Check.png" />
+    <Resource Include="images\FFIVFE-Icons-6TwinHarp-Color.png" />
+    <Resource Include="images\FFIVFE-Icons-6TwinHarp-Gray.png" />
+    <Resource Include="images\FFIVFE-Icons-7Package-Check.png" />
+    <Resource Include="images\FFIVFE-Icons-7Package-Color.png" />
+    <Resource Include="images\FFIVFE-Icons-7Package-Gray.png" />
+    <Resource Include="images\FFIVFE-Icons-8SandRuby-Check.png" />
+    <Resource Include="images\FFIVFE-Icons-8SandRuby-Color.png" />
+    <Resource Include="images\FFIVFE-Icons-8SandRuby-Gray.png" />
+    <Resource Include="images\FFIVFE-Icons-9BaronKey-Check.png" />
+    <Resource Include="images\FFIVFE-Icons-9BaronKey-Color.png" />
+    <Resource Include="images\FFIVFE-Icons-9BaronKey-Gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Tracker\Tracker.html" />
+    <Content Include="Tracker\Tracker.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

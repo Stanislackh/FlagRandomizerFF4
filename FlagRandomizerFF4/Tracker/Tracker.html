@@ -1,0 +1,294 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Tracker</title>
+    <script src="Tracker.js"></script>
+    <style>
+        body {
+            background-color: black;
+            color: whitesmoke;
+        }
+
+        table {
+            display: inline;
+        }
+        .swap-img > img {
+            display : none;
+        }
+        .swap-img > img.current {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <table class="grosTableau">
+        <tr>
+            <td>
+                <table class="Characters">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img   src="../images/FFIVFE-Characters-1DKCecil-Inactive.png" />
+                            </td>
+                            <td>
+                                <img id="Kain" onclick="swapCharacterImage('Kain','../images/FFIVFE-Characters-2Kain-Inactive.png', '../images/FFIVFE-Characters-2Kain-Active.png', '../images/FFIVFE-Characters-2Kain-Rejected.png' )" src="../images/FFIVFE-Characters-2Kain-Inactive.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Characters-3CRydia-Inactive.png" />
+                            </td>
+                            <td>
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Characters-4Tellah-Inactive.png" />
+                                    <img src="../images/FFIVFE-Characters-4Tellah-Active.png" />
+                                    <img src="../images/FFIVFE-Characters-4Tellah-Rejected.png" />
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="../images/FFIVFE-Characters-5Edward-Inactive.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Characters-6Rosa-Inactive.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Characters-7Yang-Inactive.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Characters-8Porom-Inactive.png" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="../images/FFIVFE-Characters-9Palom-Inactive.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Characters-10Cid-Inactive.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Characters-11Edge-Inactive.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Characters-12FuSoYa-Inactive.png" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+
+            <td rowspan="2">
+                <table class="Bosses">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img id="MistD" onclick="swapBossImage('MistD','../images/FFIVFE-Bosses-1MistD-Gray.png', '../images/FFIVFE-Bosses-1MistD-Color.png' )" src="../images/FFIVFE-Bosses-1MistD-Gray.png" />
+                            </td>
+                            <td>
+                                <img id="Soldier"  src="../images/FFIVFE-Bosses-2Soldier-Gray.png" />
+                            </td>
+                            <td>
+                                <img id="Octo" src="../images/FFIVFE-Bosses-3Octo-Gray.png" />
+                            </td>
+                            <td>
+                                <img id="Antlion" src="../images/FFIVFE-Bosses-4Antlion-Gray.png" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="../images/FFIVFE-Bosses-5WHag-Gray.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Bosses-6Mombomb-Gray.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Bosses-7Gauntlet-Gray.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Bosses-8Milon-Gray.png" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="../images/FFIVFE-Bosses-9MilonZ-Gray.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Bosses-10DKCecil-Gray.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Bosses-11Guards-Gray.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Bosses-12Yang-Gray.png" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="../images/FFIVFE-Bosses-13Baigan-Gray.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Bosses-14Kainazzo-Gray.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Bosses-15DElf-Gray.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Bosses-16MagusSis-Gray.png" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="../images/FFIVFE-Bosses-17Valvalis-Gray.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Bosses-18Calcabrina-Gray.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Bosses-19Golbez-Gray.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Bosses-20Lugae-Gray.png" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="../images/FFIVFE-Bosses-21Eblan-Gray.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Bosses-22Rubicante-Gray.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Bosses-23EvilWall-Gray.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Bosses-24Fiends-Gray.png" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="../images/FFIVFE-Bosses-25CPU-Gray.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Bosses-26Odin-Gray.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Bosses-27Asura-Gray.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Bosses-28Leviath-Gray.png" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="../images/FFIVFE-Bosses-29Bahamut-Gray.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Bosses-30PaleDim-Gray.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Bosses-31LunarD-Gray.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Bosses-32Plague-Gray.png" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="../images/FFIVFE-Bosses-33Ogopogo-Gray.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Bosses-34Wyvern-Gray.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Bosses-35DarkImps-Gray.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Bosses-36Zeromus-Gray.png" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <table class="KeyItems">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="../images/FFIVFE-Icons-1THECrystal-Gray.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Icons-2Pass-Gray.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Icons-3Hook-Gray.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Icons-4DarkCrystal-Gray.png" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="../images/FFIVFE-Icons-5EarthCrystal-Gray.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Icons-6TwinHarp-Gray.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Icons-7Package-Gray.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Icons-8SandRuby-Gray.png" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="../images/FFIVFE-Icons-9BaronKey-Gray.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Icons-10MagmaKey-Gray.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Icons-11TowerKey-Gray.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Icons-12LucaKey-Gray.png" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="../images/FFIVFE-Icons-13Adamant-Gray.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Icons-14LegendSword-Gray.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Icons-15Pan-Gray.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Icons-16Spoon-Gray.png" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="../images/FFIVFE-Icons-17RatTail-Gray.png" />
+                            </td>
+                            <td>
+                                <img src="../images/FFIVFE-Icons-18PinkTail-Gray.png" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+
+
+
+</body>
+</html>

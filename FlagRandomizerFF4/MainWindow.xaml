@@ -1,0 +1,26 @@
+﻿<Window x:Class="FlagRandomizerFF4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FlagRandomizerFF4"
+        mc:Ignorable="d"
+        Title="FF4 Flag Randomizer" Height="300" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Content="Good Luck !" HorizontalAlignment="Center"  VerticalAlignment="Center"  Grid.Row="0"/>
+        <Button Name="Randomize" Content="Randomize" HorizontalAlignment="Center" VerticalAlignment="Center" Width="73"  Grid.Row="1" Click="Randomize_Click"/>
+        <Image HorizontalAlignment="Center" Height="36" VerticalAlignment="Center" Width="40" Source="/images/FFIVFE-Bosses-19Golbez-Color.png" RenderTransformOrigin="0.508,2.194" Grid.Row="2"/>
+        <Label Content="Preset :" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Center" Margin="40,12,0,15" RenderTransformOrigin="0.146,0.538"></Label>
+        <ComboBox HorizontalAlignment="Center" VerticalAlignment="Center" Width="120"  Grid.Row="3" Margin="126,16,46,15" RenderTransformOrigin="0.6,0.455"/>
+        <Button Name="GoSite" Content="Go FF4FE" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Grid.Row="4" Click="GoSite_Click"/>
+    </Grid>
+
+
+</Window>
