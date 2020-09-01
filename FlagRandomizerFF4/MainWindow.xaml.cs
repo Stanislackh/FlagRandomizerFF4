@@ -73,8 +73,8 @@ namespace FlagRandomizerFF4
 
         private void OpenTracker_Click(object sender, RoutedEventArgs e)
         {
-            var joe = System.IO.Directory.GetCurrentDirectory();
-            Process.Start(joe + "/Tracker/Tracker.html");
+            //Récupére le dossier courant puis cherche en relatif le dossier du tracker 
+            Process.Start(System.IO.Path.Combine(System.IO.Directory.GetCurrentDirectory(), "../../Tracker/Tracker.html"));
         }
     }
 }
