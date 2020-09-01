@@ -73,8 +73,8 @@ namespace FlagRandomizerFF4
 
         private void OpenTracker_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("En cours de développement !");
-            //Process.Start("");
+            var joe = System.IO.Directory.GetCurrentDirectory();
+            Process.Start(joe + "/Tracker/Tracker.html");
         }
     }
 }

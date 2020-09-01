@@ -10,17 +10,33 @@
             background-color: black;
             color: whitesmoke;
         }
+        
+        td{
+            font-size: x-large;
+        }
+        thead > tr{
+            color:lightcoral
+        }
+        tr{
+            color:aqua;
+        }
 
+        input[type=checkbox] {
+            transform: scale(2);
+        }
         table {
             display: inline;
         }
-        .swap-img > img {
-            display : none;
+        .Ville{
+            color:aliceblue;
         }
-        .swap-img > img.current {
-            display: block;
+        .swap-img > img {
+            display: none;
         }
 
+            .swap-img > img.current {
+                display: block;
+            }
     </style>
 </head>
 <body>
@@ -35,6 +51,9 @@
                                     <img class="current" src="../images/FFIVFE-Characters-1DKCecil-Inactive.png" />
                                     <img src="../images/FFIVFE-Characters-1DKCecil-Active.png" />
                                     <img src="../images/FFIVFE-Characters-1DKCecil-Rejected.png" />
+                                    <img src="../images/FFIVFE-Characters-1Cecil-Inactive.png" />
+                                    <img src="../images/FFIVFE-Characters-1Cecil-Active.png" />
+                                    <img src="../images/FFIVFE-Characters-1Cecil-Rejected.png" />
                                 </a>
                             </td>
                             <td>
@@ -49,6 +68,10 @@
                                     <img class="current" src="../images/FFIVFE-Characters-3CRydia-Inactive.png" />
                                     <img src="../images/FFIVFE-Characters-3CRydia-Active.png" />
                                     <img src="../images/FFIVFE-Characters-3CRydia-Rejected.png" />
+                                    <img src="../images/FFIVFE-Characters-3Rydia-Inactive.png" />
+                                    <img src="../images/FFIVFE-Characters-3Rydia-Active.png" />
+                                    <img src="../images/FFIVFE-Characters-3Rydia-Rejected.png" />
+
                                 </a>
                             </td>
                             <td>
@@ -92,35 +115,31 @@
                         <tr>
                             <td>
                                 <a class="swap-img" onclick="swapImg(this)">
-                                    <img class="current" src="../images/FFIVFE-Characters-5Edward-Inactive.png" />
-                                    <img src="../images/FFIVFE-Characters-5Edward-Active.png" />
-                                    <img src="../images/FFIVFE-Characters-5Edward-Rejected.png" />
+                                    <img class="current" src="../images/FFIVFE-Characters-9Palom-Inactive.png" />
+                                    <img src="../images/FFIVFE-Characters-9Palom-Active.png" />
+                                    <img src="../images/FFIVFE-Characters-9Palom-Rejected.png" />
                                 </a>
-                                <img src="../images/FFIVFE-Characters-9Palom-Inactive.png" />
                             </td>
                             <td>
                                 <a class="swap-img" onclick="swapImg(this)">
-                                    <img class="current" src="../images/FFIVFE-Characters-5Edward-Inactive.png" />
-                                    <img src="../images/FFIVFE-Characters-5Edward-Active.png" />
-                                    <img src="../images/FFIVFE-Characters-5Edward-Rejected.png" />
+                                    <img class="current" src="../images/FFIVFE-Characters-10Cid-Inactive.png" />
+                                    <img src="../images/FFIVFE-Characters-10Cid-Active.png" />
+                                    <img src="../images/FFIVFE-Characters-10Cid-Rejected.png" />
                                 </a>
-                                <img src="../images/FFIVFE-Characters-10Cid-Inactive.png" />
                             </td>
                             <td>
                                 <a class="swap-img" onclick="swapImg(this)">
-                                    <img class="current" src="../images/FFIVFE-Characters-5Edward-Inactive.png" />
-                                    <img src="../images/FFIVFE-Characters-5Edward-Active.png" />
-                                    <img src="../images/FFIVFE-Characters-5Edward-Rejected.png" />
+                                    <img class="current" src="../images/FFIVFE-Characters-11Edge-Inactive.png" />
+                                    <img src="../images/FFIVFE-Characters-11Edge-Active.png" />
+                                    <img src="../images/FFIVFE-Characters-11Edge-Rejected.png" />
                                 </a>
-                                <img src="../images/FFIVFE-Characters-11Edge-Inactive.png" />
                             </td>
                             <td>
                                 <a class="swap-img" onclick="swapImg(this)">
-                                    <img class="current" src="../images/FFIVFE-Characters-5Edward-Inactive.png" />
-                                    <img src="../images/FFIVFE-Characters-5Edward-Active.png" />
-                                    <img src="../images/FFIVFE-Characters-5Edward-Rejected.png" />
+                                    <img class="current" src="../images/FFIVFE-Characters-12FuSoYa-Inactive.png" />
+                                    <img src="../images/FFIVFE-Characters-12FuSoYa-Active.png" />
+                                    <img src="../images/FFIVFE-Characters-12FuSoYa-Rejected.png" />
                                 </a>
-                                <img src="../images/FFIVFE-Characters-12FuSoYa-Inactive.png" />
                             </td>
                         </tr>
                     </tbody>
@@ -132,128 +151,236 @@
                     <tbody>
                         <tr>
                             <td>
-                                <img id="MistD" onclick="swapBossImage('MistD','../images/FFIVFE-Bosses-1MistD-Gray.png', '../images/FFIVFE-Bosses-1MistD-Color.png' )" src="../images/FFIVFE-Bosses-1MistD-Gray.png" />
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Bosses-1MistD-Gray.png" />
+                                    <img src="../images/FFIVFE-Bosses-1MistD-Color.png" />
+                                </a>
                             </td>
                             <td>
-                                <img id="Soldier"  src="../images/FFIVFE-Bosses-2Soldier-Gray.png" />
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Bosses-2Soldier-Gray.png" />
+                                    <img src="../images/FFIVFE-Bosses-2Soldier-Color.png" />
+                                </a>
                             </td>
                             <td>
-                                <img id="Octo" src="../images/FFIVFE-Bosses-3Octo-Gray.png" />
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Bosses-3Octo-Gray.png" />
+                                    <img src="../images/FFIVFE-Bosses-3Octo-Color.png" />
+                                </a>
                             </td>
                             <td>
-                                <img id="Antlion" src="../images/FFIVFE-Bosses-4Antlion-Gray.png" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img src="../images/FFIVFE-Bosses-5WHag-Gray.png" />
-                            </td>
-                            <td>
-                                <img src="../images/FFIVFE-Bosses-6Mombomb-Gray.png" />
-                            </td>
-                            <td>
-                                <img src="../images/FFIVFE-Bosses-7Gauntlet-Gray.png" />
-                            </td>
-                            <td>
-                                <img src="../images/FFIVFE-Bosses-8Milon-Gray.png" />
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Bosses-4Antlion-Gray.png" />
+                                    <img src="../images/FFIVFE-Bosses-4Antlion-Color.png" />
+                                </a>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <img src="../images/FFIVFE-Bosses-9MilonZ-Gray.png" />
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Bosses-5WHag-Gray.png" />
+                                    <img src="../images/FFIVFE-Bosses-5WHag-Color.png" />
+                                </a>
                             </td>
                             <td>
-                                <img src="../images/FFIVFE-Bosses-10DKCecil-Gray.png" />
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Bosses-6Mombomb-Gray.png" />
+                                    <img src="../images/FFIVFE-Bosses-6Mombomb-Color.png" />
+                                </a>
                             </td>
                             <td>
-                                <img src="../images/FFIVFE-Bosses-11Guards-Gray.png" />
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Bosses-7Gauntlet-Gray.png" />
+                                    <img src="../images/FFIVFE-Bosses-7Gauntlet-Color.png" />
+                                </a>
                             </td>
                             <td>
-                                <img src="../images/FFIVFE-Bosses-12Yang-Gray.png" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img src="../images/FFIVFE-Bosses-13Baigan-Gray.png" />
-                            </td>
-                            <td>
-                                <img src="../images/FFIVFE-Bosses-14Kainazzo-Gray.png" />
-                            </td>
-                            <td>
-                                <img src="../images/FFIVFE-Bosses-15DElf-Gray.png" />
-                            </td>
-                            <td>
-                                <img src="../images/FFIVFE-Bosses-16MagusSis-Gray.png" />
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Bosses-8Milon-Gray.png" />
+                                    <img src="../images/FFIVFE-Bosses-8Milon-Color.png" />
+                                </a>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <img src="../images/FFIVFE-Bosses-17Valvalis-Gray.png" />
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Bosses-9MilonZ-Gray.png" />
+                                    <img src="../images/FFIVFE-Bosses-9MilonZ-Color.png" />
+                                </a>
                             </td>
                             <td>
-                                <img src="../images/FFIVFE-Bosses-18Calcabrina-Gray.png" />
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Bosses-10DKCecil-Gray.png" />
+                                    <img src="../images/FFIVFE-Bosses-10DKCecil-Color.png" />
+                                </a>
                             </td>
                             <td>
-                                <img src="../images/FFIVFE-Bosses-19Golbez-Gray.png" />
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Bosses-11Guards-Gray.png" />
+                                    <img src="../images/FFIVFE-Bosses-11Guards-Color.png" />
+                                </a>
                             </td>
                             <td>
-                                <img src="../images/FFIVFE-Bosses-20Lugae-Gray.png" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img src="../images/FFIVFE-Bosses-21Eblan-Gray.png" />
-                            </td>
-                            <td>
-                                <img src="../images/FFIVFE-Bosses-22Rubicante-Gray.png" />
-                            </td>
-                            <td>
-                                <img src="../images/FFIVFE-Bosses-23EvilWall-Gray.png" />
-                            </td>
-                            <td>
-                                <img src="../images/FFIVFE-Bosses-24Fiends-Gray.png" />
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Bosses-12Yang-Gray.png" />
+                                    <img src="../images/FFIVFE-Bosses-12Yang-Color.png" />
+                                </a>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <img src="../images/FFIVFE-Bosses-25CPU-Gray.png" />
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Bosses-13Baigan-Gray.png" />
+                                    <img src="../images/FFIVFE-Bosses-13Baigan-Color.png" />
+                                </a>
                             </td>
                             <td>
-                                <img src="../images/FFIVFE-Bosses-26Odin-Gray.png" />
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Bosses-14Kainazzo-Gray.png" />
+                                    <img src="../images/FFIVFE-Bosses-14Kainazzo-Color.png" />
+                                </a>
                             </td>
                             <td>
-                                <img src="../images/FFIVFE-Bosses-27Asura-Gray.png" />
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Bosses-15DElf-Gray.png" />
+                                    <img src="../images/FFIVFE-Bosses-15DElf-Color.png" />
+                                </a>
                             </td>
                             <td>
-                                <img src="../images/FFIVFE-Bosses-28Leviath-Gray.png" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img src="../images/FFIVFE-Bosses-29Bahamut-Gray.png" />
-                            </td>
-                            <td>
-                                <img src="../images/FFIVFE-Bosses-30PaleDim-Gray.png" />
-                            </td>
-                            <td>
-                                <img src="../images/FFIVFE-Bosses-31LunarD-Gray.png" />
-                            </td>
-                            <td>
-                                <img src="../images/FFIVFE-Bosses-32Plague-Gray.png" />
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Bosses-16MagusSis-Gray.png" />
+                                    <img src="../images/FFIVFE-Bosses-16MagusSis-Color.png" />
+                                </a>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <img src="../images/FFIVFE-Bosses-33Ogopogo-Gray.png" />
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Bosses-17Valvalis-Gray.png" />
+                                    <img src="../images/FFIVFE-Bosses-17Valvalis-Color.png" />
+                                </a>
                             </td>
                             <td>
-                                <img src="../images/FFIVFE-Bosses-34Wyvern-Gray.png" />
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Bosses-18Calcabrina-Gray.png" />
+                                    <img src="../images/FFIVFE-Bosses-18Calcabrina-Color.png" />
+                                </a>
                             </td>
                             <td>
-                                <img src="../images/FFIVFE-Bosses-35DarkImps-Gray.png" />
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Bosses-19Golbez-Gray.png" />
+                                    <img src="../images/FFIVFE-Bosses-19Golbez-Color.png" />
+                                </a>
                             </td>
                             <td>
-                                <img src="../images/FFIVFE-Bosses-36Zeromus-Gray.png" />
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Bosses-20Lugae-Gray.png" />
+                                    <img src="../images/FFIVFE-Bosses-20Lugae-Color.png" />
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Bosses-21Eblan-Gray.png" />
+                                    <img src="../images/FFIVFE-Bosses-21Eblan-Color.png" />
+                                </a>
+                            </td>
+                            <td>
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Bosses-22Rubicante-Gray.png" />
+                                    <img src="../images/FFIVFE-Bosses-22Rubicante-Color.png" />
+                                </a>
+                            </td>
+                            <td>
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Bosses-23EvilWall-Gray.png" />
+                                    <img src="../images/FFIVFE-Bosses-23EvilWall-Color.png" />
+                                </a>
+                            </td>
+                            <td>
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Bosses-24Fiends-Gray.png" />
+                                    <img src="../images/FFIVFE-Bosses-24Fiends-Color.png" />
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Bosses-25CPU-Gray.png" />
+                                    <img src="../images/FFIVFE-Bosses-25CPU-Color.png" />
+                                </a>
+                            </td>
+                            <td>
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Bosses-26Odin-Gray.png" />
+                                    <img src="../images/FFIVFE-Bosses-26Odin-Color.png" />
+                                </a>
+                            </td>
+                            <td>
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Bosses-27Asura-Gray.png" />
+                                    <img src="../images/FFIVFE-Bosses-27Asura-Color.png" />
+                                </a>
+                            </td>
+                            <td>
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Bosses-28Leviath-Gray.png" />
+                                    <img src="../images/FFIVFE-Bosses-28Leviath-Color.png" />
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Bosses-29Bahamut-Gray.png" />
+                                    <img src="../images/FFIVFE-Bosses-29Bahamut-Color.png" />
+                                </a>
+                            </td>
+                            <td>
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Bosses-30PaleDim-Gray.png" />
+                                    <img src="../images/FFIVFE-Bosses-30PaleDim-Color.png" />
+                                </a>
+                            </td>
+                            <td>
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Bosses-31LunarD-Gray.png" />
+                                    <img src="../images/FFIVFE-Bosses-31LunarD-Color.png" />
+                                </a>
+                            </td>
+                            <td>
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Bosses-32Plague-Gray.png" />
+                                    <img src="../images/FFIVFE-Bosses-32Plague-Color.png" />
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Bosses-33Ogopogo-Gray.png" />
+                                    <img src="../images/FFIVFE-Bosses-33Ogopogo-Color.png" />
+                                </a>
+                            </td>
+                            <td>
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Bosses-34Wyvern-Gray.png" />
+                                    <img src="../images/FFIVFE-Bosses-34Wyvern-Color.png" />
+                                </a>
+                            </td>
+                            <td>
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Bosses-35DarkImps-Gray.png" />
+                                    <img src="../images/FFIVFE-Bosses-35DarkImps-Color.png" />
+                                </a>
+                            </td>
+                            <td>
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Bosses-36Zeromus-Gray.png" />
+                                    <img src="../images/FFIVFE-Bosses-36Zeromus-Color.png" />
+                                </a>
                             </td>
                         </tr>
                     </tbody>
@@ -267,66 +394,138 @@
                     <tbody>
                         <tr>
                             <td>
-                                <img src="../images/FFIVFE-Icons-1THECrystal-Gray.png" />
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Icons-1THECrystal-Gray.png" />
+                                    <img src="../images/FFIVFE-Icons-1THECrystal-Color.png" />
+                                    <img src="../images/FFIVFE-Icons-1THECrystal-Check.png" />
+                                </a>
                             </td>
                             <td>
-                                <img src="../images/FFIVFE-Icons-2Pass-Gray.png" />
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Icons-2Pass-Gray.png" />
+                                    <img src="../images/FFIVFE-Icons-2Pass-Color.png" />
+                                    <img src="../images/FFIVFE-Icons-2Pass-Check.png" />
+                                </a>
                             </td>
                             <td>
-                                <img src="../images/FFIVFE-Icons-3Hook-Gray.png" />
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Icons-3Hook-Gray.png" />
+                                    <img src="../images/FFIVFE-Icons-3Hook-Color.png" />
+                                    <img src="../images/FFIVFE-Icons-3Hook-Check.png" />
+                                </a>
                             </td>
                             <td>
-                                <img src="../images/FFIVFE-Icons-4DarkCrystal-Gray.png" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img src="../images/FFIVFE-Icons-5EarthCrystal-Gray.png" />
-                            </td>
-                            <td>
-                                <img src="../images/FFIVFE-Icons-6TwinHarp-Gray.png" />
-                            </td>
-                            <td>
-                                <img src="../images/FFIVFE-Icons-7Package-Gray.png" />
-                            </td>
-                            <td>
-                                <img src="../images/FFIVFE-Icons-8SandRuby-Gray.png" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img src="../images/FFIVFE-Icons-9BaronKey-Gray.png" />
-                            </td>
-                            <td>
-                                <img src="../images/FFIVFE-Icons-10MagmaKey-Gray.png" />
-                            </td>
-                            <td>
-                                <img src="../images/FFIVFE-Icons-11TowerKey-Gray.png" />
-                            </td>
-                            <td>
-                                <img src="../images/FFIVFE-Icons-12LucaKey-Gray.png" />
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Icons-4DarkCrystal-Gray.png" />
+                                    <img src="../images/FFIVFE-Icons-4DarkCrystal-Color.png" />
+                                    <img src="../images/FFIVFE-Icons-4DarkCrystal-Check.png" />
+                                </a>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <img src="../images/FFIVFE-Icons-13Adamant-Gray.png" />
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Icons-5EarthCrystal-Gray.png" />
+                                    <img src="../images/FFIVFE-Icons-5EarthCrystal-Color.png" />
+                                    <img src="../images/FFIVFE-Icons-5EarthCrystal-Check.png" />
+                                </a>
                             </td>
                             <td>
-                                <img src="../images/FFIVFE-Icons-14LegendSword-Gray.png" />
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Icons-6TwinHarp-Gray.png" />
+                                    <img src="../images/FFIVFE-Icons-6TwinHarp-Color.png" />
+                                    <img src="../images/FFIVFE-Icons-6TwinHarp-Check.png" />
+                                </a>
                             </td>
                             <td>
-                                <img src="../images/FFIVFE-Icons-15Pan-Gray.png" />
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Icons-7Package-Gray.png" />
+                                    <img src="../images/FFIVFE-Icons-7Package-Color.png" />
+                                    <img src="../images/FFIVFE-Icons-7Package-Check.png" />
+                                </a>
                             </td>
                             <td>
-                                <img src="../images/FFIVFE-Icons-16Spoon-Gray.png" />
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Icons-8SandRuby-Gray.png" />
+                                    <img src="../images/FFIVFE-Icons-8SandRuby-Color.png" />
+                                    <img src="../images/FFIVFE-Icons-8SandRuby-Check.png" />
+                                </a>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <img src="../images/FFIVFE-Icons-17RatTail-Gray.png" />
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Icons-9BaronKey-Gray.png" />
+                                    <img src="../images/FFIVFE-Icons-9BaronKey-Color.png" />
+                                    <img src="../images/FFIVFE-Icons-9BaronKey-Check.png" />
+                                </a>
                             </td>
                             <td>
-                                <img src="../images/FFIVFE-Icons-18PinkTail-Gray.png" />
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Icons-10MagmaKey-Gray.png" />
+                                    <img src="../images/FFIVFE-Icons-10MagmaKey-Color.png" />
+                                    <img src="../images/FFIVFE-Icons-10MagmaKey-Check.png" />
+                                </a>
+                            </td>
+                            <td>
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Icons-11TowerKey-Gray.png" />
+                                    <img src="../images/FFIVFE-Icons-11TowerKey-Color.png" />
+                                    <img src="../images/FFIVFE-Icons-11TowerKey-Check.png" />
+                                </a>
+                            </td>
+                            <td>
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Icons-12LucaKey-Gray.png" />
+                                    <img src="../images/FFIVFE-Icons-12LucaKey-Color.png" />
+                                    <img src="../images/FFIVFE-Icons-12LucaKey-Check.png" />
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Icons-13Adamant-Gray.png" />
+                                    <img src="../images/FFIVFE-Icons-13Adamant-Color.png" />
+                                    <img src="../images/FFIVFE-Icons-13Adamant-Check.png" />
+                                </a>
+                            </td>
+                            <td>
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Icons-14LegendSword-Gray.png" />
+                                    <img src="../images/FFIVFE-Icons-14LegendSword-Color.png" />
+                                    <img src="../images/FFIVFE-Icons-14LegendSword-Check.png" />
+                                </a>
+                            </td>
+                            <td>
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Icons-15Pan-Gray.png" />
+                                    <img src="../images/FFIVFE-Icons-15Pan-Color.png" />
+                                    <img src="../images/FFIVFE-Icons-15Pan-Check.png" />
+                                </a>
+                            </td>
+                            <td>
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Icons-16Spoon-Gray.png" />
+                                    <img src="../images/FFIVFE-Icons-16Spoon-Color.png" />
+                                    <img src="../images/FFIVFE-Icons-16Spoon-Check.png" />
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Icons-17RatTail-Gray.png" />
+                                    <img src="../images/FFIVFE-Icons-17RatTail-Color.png" />
+                                    <img src="../images/FFIVFE-Icons-17RatTail-Check.png" />
+                                </a>
+                            </td>
+                            <td>
+                                <a class="swap-img" onclick="swapImg(this)">
+                                    <img class="current" src="../images/FFIVFE-Icons-18PinkTail-Gray.png" />
+                                    <img src="../images/FFIVFE-Icons-18PinkTail-Color.png" />
+                                    <img src="../images/FFIVFE-Icons-18PinkTail-Check.png" />
+                                </a>
                             </td>
                         </tr>
                     </tbody>
@@ -335,8 +534,129 @@
         </tr>
     </table>
 
-
-
-
+    <h2>Magasins</h2>
+    <table>
+        <thead>
+            <tr>
+                <td class="Ville">Ville</td>
+                <td>Siren</td>
+                <td>Coffin</td>
+                <td>Starveil</td>
+                <td>Cure3</td>
+                <td>AuApple</td>
+                <td>SomaDrop</td>
+            </tr>
+        </thead>
+        <tbody class="grosCheck">
+            <tr>
+                <td>Mist</td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+            </tr>
+            <tr>
+                <td>Baron</td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+            </tr>
+            <tr>
+                <td>Toroia</td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+            </tr>
+            <tr>
+                <td>Fabul</td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+            </tr>
+            <tr>
+                <td>Silvera</td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+            </tr>
+            <tr>
+                <td>Mysidia</td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+            </tr>
+            <tr>
+                <td>Agart</td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+            </tr>
+            <tr>
+                <td>Eblan</td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+            </tr>
+            <tr>
+                <td>Chateau des Lalas</td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+            </tr>
+            <tr>
+                <td>Tomra</td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+            </tr>
+            <tr>
+                <td>Freymarch</td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+            </tr>
+            <tr>
+                <td>Lune</td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>
