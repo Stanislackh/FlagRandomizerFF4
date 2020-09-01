@@ -70,7 +70,7 @@ namespace FlagRandomizerFF4
 
         private void OpenTracker_Click(object sender, RoutedEventArgs e)
         {
-            //Process.Start("");
+            Process.Start("");
         }
     }
 }
