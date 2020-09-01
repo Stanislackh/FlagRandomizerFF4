@@ -25,7 +25,7 @@
         <ComboBox Name="BoiteCombo" Loaded="ComboBox_Loaded" SelectionChanged="ComboBox_SelectionChanged" HorizontalAlignment="Center" VerticalAlignment="Center" Width="162"  Grid.Row="1" Margin="33,41,320,29" RenderTransformOrigin="0.6,0.455" Grid.ColumnSpan="2"/>
         <Button Name="FromScratch" Content="From Scratch" HorizontalAlignment="Center" VerticalAlignment="Center" Width="94" Grid.Row="3" Click="FromScratch_Click" Margin="385,39,50,34" Grid.ColumnSpan="2"/>
         <Button x:Name="ChoosePreset" Content="Apply Preset" HorizontalAlignment="Center" VerticalAlignment="Center" Width="74"  Grid.Row="1" Click="ChoosePreset_Click" Margin="378,43,63,29" Grid.Column="1"/>
-        <Button  Name="OpenTracker" Content="Tracker" Click="OpenTracker_Click" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="228,36,0,0" Grid.Row="4" VerticalAlignment="Top" Width="85" RenderTransformOrigin="-0.154,-0.403"/>
+        <Button  Name="OpenTracker" Content="Download Tracker" Click="OpenTracker_Click" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="217,35,0,0" Grid.Row="4" VerticalAlignment="Top" Width="102" RenderTransformOrigin="-0.154,-0.403"/>
     </Grid>
 
 
