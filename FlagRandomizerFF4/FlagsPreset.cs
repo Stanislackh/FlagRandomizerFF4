@@ -11,25 +11,25 @@ namespace FlagRandomizerFF4
         //Dictionnaire des Presets
         public static Dictionary<int, string> DicoNomFlag { get; } = new Dictionary<int, string>()
         {
-            { 1 , "DARK SIZE MATTER" },
-            { 2 , "BLACK OR WHITE" },
-            { 3 , "LUCKY OR NOT" },
-            { 4 , "SLACKH'S DREAM" },
-            { 5 , "TATE NO YUUSHA" },
-            { 6 , "RUN FOR THE LALAS" },
-            { 7 , "DRAGON HUNTER" },
-            { 8 , "KILL THE RELATIVES" },
-            { 9 , "BOSS RUSH" },
-            { 10 , "FAZE EZ AS FUCK" },
-            { 11, "RUN FOR YOUR BOOTY" },
+            { 0 , "DARK SIZE MATTER" },
+            { 1 , "BLACK OR WHITE" },
+            { 2 , "LUCKY OR NOT" },
+            { 3 , "SLACKH'S DREAM" },
+            { 4 , "TATE NO YUUSHA" },
+            { 5 , "RUN FOR THE LALAS" },
+            { 6 , "DRAGON HUNTER" },
+            { 7 , "KILL THE RELATIVES" },
+            { 8 , "BOSS RUSH" },
+            { 9 , "FAZE EZ AS FUCK" },
+            { 10, "RUN FOR YOUR BOOTY" },
         };
 
         //Dictionnaire du contenu des Presets
         public static Dictionary<string, string> DicoFlag { get; } = new Dictionary<string, string>()
         {
             {"DARK SIZE MATTER", "Omode:dkmatter/win:game Kmain/summon/moon Pkey Cstandard/maybe/start:edward/only:tellah,edward,yang,palom,porom,cid/j:spells,abilities Tstandard/sparse:50 Sstandard Bstandard/alt:gauntlet/whichburn Nchars/key Etoggle/danger Gdupe/life -kit:better" },
-            { "BLACK OR WHITE", "Omode:classicgiant/win:game Kmain Pshop Crelaxed/maybe/only:cecil/j:spells,abilities/permajoin Tstandard Sstandard Bstandard/alt:gauntlet/whichburn Nchars/key Etoggle Gdupe/warp/life -kit:better"},
-            {"LUCK OR NOT", "Orandom:5/win:crystal Kmain/summon/moon Pkey Cstandard/maybe/start:rydia/only:cecil,kain,rydia,rosa,edge,fusoya/j:spells,abilities/permajoin Tstandard/sparse:90 Sstandard Bstandard/alt:gauntlet Nchars/key Etoggle/keep:behemoths Gdupe/warp/life -kit:better"},
+            {"BLACK OR WHITE", "Omode:classicgiant/win:game Kmain Pshop Crelaxed/maybe/only:cecil/j:spells,abilities/permajoin Tstandard Sstandard Bstandard/alt:gauntlet/whichburn Nchars/key Etoggle Gdupe/warp/life -kit:better"},
+            {"LUCKY OR NOT", "Orandom:5/win:crystal Kmain/summon/moon Pkey Cstandard/maybe/start:rydia/only:cecil,kain,rydia,rosa,edge,fusoya/j:spells,abilities/permajoin Tstandard/sparse:90 Sstandard Bstandard/alt:gauntlet Nchars/key Etoggle/keep:behemoths Gdupe/warp/life -kit:better"},
             {"SLACKH'S DREAM", "Omode:classicgiant/win:crystal Kmain/moon Pkey Crelaxed/maybe/only:porom/j:spells,abilities/permajoin Tstandard Sstandard/free Bstandard/alt:gauntlet/whichburn Nchars/key Etoggle Gdupe/warp/life -kit:better" },
             {"TATE NO YUUSHA", "Omode:classicforge/win:crystal Kmain/moon Pkey Cstandard/maybe/start:tellah/only:rydia,palom,porom/j:spells,abilities/permajoin Tstandard/sparse:70 Sstandard Bstandard/alt:gauntlet/whichburn Nchars/key Etoggle Gdupe/warp/life -kit:better"},
             {"RUN FOR THE LALAS", "O1:quest_dwarfcastle/win:game Kmain Pshop Crelaxed/maybe/start:rosa/only:edge/j:spells,abilitiesTstandard Sstandard/freeBstandard/whyburn Nnone Etoggle Gdupe/warp/life -kit:better" },

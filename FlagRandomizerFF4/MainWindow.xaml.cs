@@ -23,7 +23,8 @@ namespace FlagRandomizerFF4
     public partial class MainWindow : Window
     {
 
-        private RandomizerMethods blapblap = new RandomizerMethods();
+        private RandomizerMethods randMethods = new RandomizerMethods();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -31,15 +32,45 @@ namespace FlagRandomizerFF4
 
         }
 
-        private void Randomize_Click(object sender, RoutedEventArgs e)
+        private void ComboBox_Loaded(object sender, RoutedEventArgs e)
         {
-
+            var combo = sender as ComboBox;
+            combo.ItemsSource = FlagsPreset.DicoNomFlag.Values;
         }
 
-        private void GoSite_Click(object sender, RoutedEventArgs e)
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //Il faut récup l'item de la combobox pour le Preset
-            blapblap.ScratchFlag();
+            var selectedComboItem = sender as ComboBox;
+            string name = selectedComboItem.SelectedItem as string;
+        }
+
+        private void ChoosePreset_Click(object sender, RoutedEventArgs e)
+        {
+            var index = BoiteCombo.SelectedIndex;
+
+            NomFlag.Content = FlagsPreset.DicoNomFlag[index];
+            ImageFlag.Source = new BitmapImage(new Uri(Sprites.DicoSpriteSeed[index], UriKind.Relative));
+            randMethods.ChoixFlag(index);
+        }
+
+        private void FromScratch_Click(object sender, RoutedEventArgs e)
+        {
+            NomFlag.Content = "THE TIME HAS COME !";
+            ImageFlag.Source = new BitmapImage(new Uri(Sprites.DicoSpriteSeed[11], UriKind.Relative));
+            randMethods.ScratchFlag();
+        }
+
+        private void RandomPreset_Click(object sender, RoutedEventArgs e)
+        {
+            var numero = randMethods.PresetFlag();
+
+            ImageFlag.Source = new BitmapImage(new Uri(Sprites.DicoSpriteSeed[numero], UriKind.Relative));
+            NomFlag.Content = FlagsPreset.DicoNomFlag[numero];
+        }
+
+        private void OpenTracker_Click(object sender, RoutedEventArgs e)
+        {
+            //Process.Start("");
         }
     }
 }

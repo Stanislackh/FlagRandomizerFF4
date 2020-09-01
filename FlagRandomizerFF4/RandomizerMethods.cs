@@ -22,45 +22,7 @@ namespace FlagRandomizerFF4
         public void CopierFlag(string FlagFinal)
         {
             Clipboard.Clear();
-            Clipboard.SetText(SuperFlag);
-        }
-
-        //Méthode pour choisir le flag
-        public void ChoixFlag(int numeroFlag)
-        {
-            CopierFlag(FlagsPreset.DicoFlag[FlagsPreset.DicoNomFlag[numeroFlag]]);
-        }
-
-        //Choix seed prédéfinie
-        public void PresetFlag()
-        {
-            int Chiffre = Rnd.Next(0, 10);
-
-            if (Chiffre == 1) //Echec
-            {
-                Chiffre = Rnd.Next(1, 7);
-                if (Chiffre == 1) //Echec critique pire preset
-                {
-                    ChoixFlag(Chiffre);
-                }
-                else //On limite la casse
-                {
-                    ChoixFlag(11);
-                }
-            }
-
-            if (Chiffre == 6) //Réussite
-            {
-                Chiffre = Rnd.Next(1, 7);
-                if (Chiffre == 6) //Réussite critique meilleur preset
-                {
-                    ChoixFlag(Chiffre);
-                }
-                else //Bien aussi
-                {
-                    ChoixFlag(10);
-                }
-            }
+            Clipboard.SetText(FlagFinal);
 
             //Ouvre la page pour entrer le flag
             if (SiteOpen == false)
@@ -70,7 +32,50 @@ namespace FlagRandomizerFF4
             }
         }
 
-        //Objectifs
+        //Méthode pour choisir le flag
+        public void ChoixFlag(int numeroFlag)
+        {
+            CopierFlag(FlagsPreset.DicoFlag[FlagsPreset.DicoNomFlag[numeroFlag]]);
+        }
+
+        //Choix seed prédéfinie
+        public int PresetFlag()
+        {
+            int Chiffre = Rnd.Next(0, 10);
+
+            if (Chiffre == 0) //Echec
+            {
+                Chiffre = Rnd.Next(0, 6);
+                if (Chiffre == 0) //Echec critique pire preset
+                {
+                    ChoixFlag(Chiffre);
+                }
+                else //On limite la casse
+                {
+                    ChoixFlag(10);
+                }
+            }
+
+            if (Chiffre == 5) //Réussite
+            {
+                Chiffre = Rnd.Next(0, 7);
+                if (Chiffre == 5) //Réussite critique meilleur preset
+                {
+                    ChoixFlag(Chiffre);
+                }
+                else //Bien aussi
+                {
+                    ChoixFlag(9);
+                }
+            }
+
+            //Sinon
+            ChoixFlag(Chiffre);
+
+            return Chiffre;
+        }
+
+        //Objectifs 
         public void RandObjective()
         {
             //Objective mode
@@ -195,7 +200,7 @@ namespace FlagRandomizerFF4
             //Si un seul objectif
             if (custom == 1)
             {
-                SuperFlag += Convert.ToString(1) + ":" + ListeCustom[custom];
+                SuperFlag += Convert.ToString(1) + ":" + ListeCustom[custom - 1];
             }
             else //Si plusieurs objectifs
             {
@@ -484,7 +489,7 @@ namespace FlagRandomizerFF4
             List<string> ListShop = new List<string>();
             SuperFlag += BuildFromScratch.DicoPrefixes[5];
 
-            int alea = Rnd.Next(1, 7);
+            int alea = Rnd.Next(1, 6);
             SuperFlag += BuildFromScratch.DicoShop[alea];
 
             alea = Rnd.Next(0, 6);
@@ -717,14 +722,6 @@ namespace FlagRandomizerFF4
             Other();
 
             CopierFlag(SuperFlag);
-
-            if (SiteOpen == false)
-            {
-                Process.Start("http://ff4fe.com/make");
-                SiteOpen = true;
-            }
-
-            Console.WriteLine(SuperFlag);
         }
     }
 }

@@ -10,20 +10,20 @@ namespace FlagRandomizerFF4
     {
 
         // Presets Seed
-        public static List<KeyValuePair<int, string>> DicoSpriteSeed = new List<KeyValuePair<int, string>>()
+        public static Dictionary<int, string> DicoSpriteSeed = new Dictionary<int, string>()
         {
-            new KeyValuePair<int, string>(1, "images/FFIVFE-Characters-5Edward-Active.png" ),
-            new KeyValuePair<int, string>(2, "images/FFIVFE-Characters-1DKCecil-Active.png" ),
-            new KeyValuePair<int, string>(3, "images/FFIVFE-Characters-6Rosa-Active.png" ),
-            new KeyValuePair<int, string>(4, "images/FFIVFE-Characters-8Porom-Active.png" ),
-            new KeyValuePair<int, string>(5, "images/FFIVFE-Characters-4Tellah-Active.png" ),
-            new KeyValuePair<int, string>(6, "images/FFIVFE-Characters-3CRydia-Active.png" ),
-            new KeyValuePair<int, string>(7, "images/FFIVFE-Characters-2Kain-Active.png" ),
-            new KeyValuePair<int, string>(8, "images/FFIVFE-Bosses-1MistD-Color.png" ),
-            new KeyValuePair<int, string>(9, "images/FFIVFE-Bosses-36Zeromus-Color.png" ),
-            new KeyValuePair<int, string>(10, "images/FFIVFE-Characters-11Edge-Active.png" ),
-            new KeyValuePair<int, string>(11, "images/FFIVFE-Characters-12FuSoYa-Active.png" ),
-            new KeyValuePair<int, string>(12, "images/timeHasCome.jpg" )
+           { 0, "/images/FFIVFE-Characters-5Edward-Active.png" },
+           { 1, "/images/FFIVFE-Characters-1DKCecil-Active.png" },
+           { 2, "/images/FFIVFE-Characters-6Rosa-Active.png" },
+           { 3, "/images/FFIVFE-Characters-8Porom-Active.png" },
+           { 4, "/images/FFIVFE-Characters-4Tellah-Active.png" },
+           { 5, "/images/FFIVFE-Characters-3CRydia-Active.png" },
+           { 6, "/images/FFIVFE-Characters-2Kain-Active.png" },
+           { 7, "/images/FFIVFE-Bosses-1MistD-Color.png" },
+           { 8, "/images/FFIVFE-Bosses-36Zeromus-Color.png" },
+           { 9, "/images/FFIVFE-Characters-11Edge-Active.png" },
+           { 10, "/images/FFIVFE-Characters-12FuSoYa-Active.png" },
+           { 11, "/images/FFIVFE-Bosses-29Bahamut-Color.png" }
         };
 
         // Characters

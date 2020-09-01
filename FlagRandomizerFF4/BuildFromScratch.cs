@@ -197,7 +197,6 @@ namespace FlagRandomizerFF4
             {3,"pro" },
             {4,"wild" },
             {5,"cabins" },
-            {6,"vanilla" }
         };
 
         //Options des magasins
