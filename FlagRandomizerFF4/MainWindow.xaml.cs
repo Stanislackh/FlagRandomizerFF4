@@ -48,9 +48,12 @@ namespace FlagRandomizerFF4
         {
             var index = BoiteCombo.SelectedIndex;
 
-            NomFlag.Content = FlagsPreset.DicoNomFlag[index];
-            ImageFlag.Source = new BitmapImage(new Uri(Sprites.DicoSpriteSeed[index], UriKind.Relative));
-            randMethods.ChoixFlag(index);
+            if (index != -1)
+            {
+                NomFlag.Content = FlagsPreset.DicoNomFlag[index];
+                ImageFlag.Source = new BitmapImage(new Uri(Sprites.DicoSpriteSeed[index], UriKind.Relative));
+                randMethods.ChoixFlag(index);
+            }
         }
 
         private void FromScratch_Click(object sender, RoutedEventArgs e)
@@ -70,7 +73,8 @@ namespace FlagRandomizerFF4
 
         private void OpenTracker_Click(object sender, RoutedEventArgs e)
         {
-            Process.Start("");
+            MessageBox.Show("En cours de développement !");
+            //Process.Start("");
         }
     }
 }
