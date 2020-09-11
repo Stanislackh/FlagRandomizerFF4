@@ -469,12 +469,12 @@ namespace FlagRandomizerFF4
             int alea = Rnd.Next(1, 6);
             SuperFlag += BuildFromScratch.DicoTreasure[alea];
 
-            alea = Rnd.Next(0, 4);
+            alea = Rnd.Next(0, 2);
             if (alea == 3)
             {
                 foreach (var item in BuildFromScratch.DicoTreasureOption)
                 {
-                    SuperFlag += "/" + item;
+                    SuperFlag += "/" + item.Value;
                 }
             }
             else if (alea != 0)
