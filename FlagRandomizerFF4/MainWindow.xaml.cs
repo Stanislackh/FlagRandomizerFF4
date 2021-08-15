@@ -31,19 +31,6 @@ namespace FlagRandomizerFF4
             this.DataContext = new MainViewModel();
 
         }
-
-        private void ComboBox_Loaded(object sender, RoutedEventArgs e)
-        {
-            var combo = sender as ComboBox;
-            combo.ItemsSource = FlagsPreset.DicoNomFlag.Values;
-        }
-
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            var selectedComboItem = sender as ComboBox;
-            string name = selectedComboItem.SelectedItem as string;
-        }
-
         private void ChoosePreset_Click(object sender, RoutedEventArgs e)
         {
             var index = BoiteCombo.SelectedIndex;
@@ -69,6 +56,18 @@ namespace FlagRandomizerFF4
 
             ImageFlag.Source = new BitmapImage(new Uri(Sprites.DicoSpriteSeed[numero], UriKind.Relative));
             NomFlag.Content = FlagsPreset.DicoNomFlag[numero];
+        }
+
+        private void ComboBox_Loaded(object sender, RoutedEventArgs e)
+        {
+            var combo = sender as ComboBox;
+            combo.ItemsSource = FlagsPreset.DicoNomFlag.Values;
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var selectedComboItem = sender as ComboBox;
+            string name = selectedComboItem.SelectedItem as string;
         }
 
         private void OpenTracker_Click(object sender, RoutedEventArgs e)

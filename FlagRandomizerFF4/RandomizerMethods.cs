@@ -25,7 +25,7 @@ namespace FlagRandomizerFF4
             Clipboard.SetText(FlagFinal);
 
             //Ouvre la page pour entrer le flag
-            if (SiteOpen == false)
+            if (!SiteOpen)
             {
                 Process.Start("http://ff4fe.com/make");
                 SiteOpen = true;
