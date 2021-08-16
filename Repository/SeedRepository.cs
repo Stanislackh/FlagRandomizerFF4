@@ -8,6 +8,7 @@ namespace Repository
 {
     public class SeedRepository : ISeedOption
     {
+        //All entities created
         private FlagContextDB _flagContextDB;
 
         public SeedRepository(FlagContextDB flagContextDB)
@@ -15,10 +16,22 @@ namespace Repository
             _flagContextDB = flagContextDB;
         }
         private Dictionary<string, string> listePreset { get; set; } = new Dictionary<string, string>();
+
         public void AddDicoInDB()
         {
+            foreach (var item in ScriptSql.DicoPass)
+            {
+                Pass pass = new Pass
+                {
+                    Flag = item.Value
+                };
+
+                _flagContextDB.Passes.Add(pass);
+                _flagContextDB.SaveChanges();
+            }
+
             //Bosses
-            foreach (var item in ScriptSql.DicoBossWyvern)
+           /* foreach (var item in ScriptSql.DicoBossWyvern)
             {
                 Boss boss = new Boss();
                 boss.Flag = item.Value;
@@ -27,58 +40,81 @@ namespace Repository
                 _flagContextDB.SaveChanges();
             }
 
-            //Character
+            //CharacterRandom
             foreach (var item in ScriptSql.DicoCharacterRand)
             {
-                CharacterRandom character = new CharacterRandom();
-                //remplir
+                CharacterRandom characterRandom = new CharacterRandom();
+                characterRandom.Flag = item.Value;
+
+                _flagContextDB.CharacterRandoms.Add(characterRandom);
+                _flagContextDB.SaveChanges();
             }
 
             foreach (var item in ScriptSql.DicoCharacterStart)
             {
-                CharacterStart character = new CharacterStart();
-                //remplir
+                CharacterStart characterStart = new CharacterStart();
+                characterStart.Flag = item.Value;
+
+                _flagContextDB.CharacterStarts.Add(characterStart);
+                _flagContextDB.SaveChanges();
             }
 
             foreach (var item in ScriptSql.DicoCharacterSpell)
             {
-                CharacterRandom character = new CharacterRandom();
-                //remplir
+                CharacterSpell characterSpell = new CharacterSpell();
+                characterSpell.Flag = item.Value;
+
+                _flagContextDB.CharacterSpells.Add(characterSpell);
+                _flagContextDB.SaveChanges();
             }
 
             //Chest
             foreach (var item in ScriptSql.DicoTreasure)
             {
                 Chest chest = new Chest();
-                //Remplir
+                chest.Flag = item.Value;
+
+                _flagContextDB.Chests.Add(chest);
+                _flagContextDB.SaveChanges();
             }
 
             //Junk
             foreach (var item in ScriptSql.DicoTreasureOption)
             {
                 Junk junk = new Junk();
-                //Remplir
+                junk.Flag = item.Value;
+
+                _flagContextDB.Junks.Add(junk);
+                _flagContextDB.SaveChanges();
             }
 
             //Encounter
             foreach (var item in ScriptSql.DicoEncounterToggle)
             {
-                EncounterToggle encounter = new EncounterToggle();
-                //remplir
+                EncounterToggle encounterToggle = new EncounterToggle();
+                encounterToggle.Flag = item.Value;
 
+                _flagContextDB.EncounterToggles.Add(encounterToggle);
+                _flagContextDB.SaveChanges();
             }
 
             foreach (var item in ScriptSql.DicoEncounterDrop)
             {
-                EncounterDrop encounter = new EncounterDrop();
-                //Remplir
+                EncounterDrop encounterDrop = new EncounterDrop();
+                encounterDrop.Flag = item.Value;
+
+                _flagContextDB.EncounterDrops.Add(encounterDrop);
+                _flagContextDB.SaveChanges();
             }
 
             //Glitch
             foreach (var item in ScriptSql.DicoGlitch)
             {
                 Glitch glitch = new Glitch();
-                //Remplir
+                glitch.Flag = item.Value;
+
+                _flagContextDB.Glitches.Add(glitch);
+                _flagContextDB.SaveChanges();
             }
 
             //ItemKey
@@ -92,39 +128,54 @@ namespace Repository
             foreach (var item in ScriptSql.DicoObjectiveMode)
             {
                 ObjectiveMode objectiveMode = new ObjectiveMode();
-                //remplir
+                objectiveMode.Flag = item.Value;
+
+                _flagContextDB.ObjectiveModes.Add(objectiveMode);
+                _flagContextDB.SaveChanges();
             }
 
             foreach (var item in ScriptSql.DicoObjectiveCustom)
             {
                 ObjectiveCustom objectivevCustom = new ObjectiveCustom();
+                objectivevCustom.Flag = item.Value;
+
+                _flagContextDB.ObjectiveCustoms.Add(objectivevCustom);
+                _flagContextDB.SaveChanges();
             }
 
             //Other
             foreach (var item in ScriptSql.DicoOther)
             {
                 Other other = new Other();
-                //Remplir
+                other.Flag = item.Value;
+
+                _flagContextDB.Others.Add(other);
+                _flagContextDB.SaveChanges();
             }
 
             foreach (var item in ScriptSql.DicoOtherStarter)
             {
                 OtherStarter otherStarter = new OtherStarter();
-                //Remplir
+                otherStarter.Flag = item.Value;
+
+                _flagContextDB.OtherStarters.Add(otherStarter);
+                _flagContextDB.SaveChanges();
             }
 
             //Permadeath
             foreach (var item in ScriptSql.DicoPermadeath)
             {
                 Permadeath permadeath = new Permadeath();
-                //Remplir
+                permadeath.Flag = item.Value;
+
+                _flagContextDB.Permadeaths.Add(permadeath);
+                _flagContextDB.SaveChanges();
             }
-            
+
             //PresetFlag
             foreach (var item in ScriptSql.DicoNomFlag)
             {
                 PresetFlag presetFlag = new PresetFlag();
-                //presetFlag.Id = item.Key;
                 presetFlag.Libelle = item.Value;
 
                 foreach (var elem in ScriptSql.DicoFlag)
@@ -143,22 +194,31 @@ namespace Repository
             foreach (var item in ScriptSql.DicoShop)
             {
                 Shop shop = new Shop();
-                //Remplir
+                shop.Flag = item.Value;
+
+                _flagContextDB.Shops.Add(shop);
+                _flagContextDB.SaveChanges();
             }
 
             //Sparse
             foreach (var item in ScriptSql.DicoShopOptions)
             {
                 Sparse sparse = new Sparse();
-                //remplir
+                sparse.Flag = item.Value;
+
+                _flagContextDB.Sparses.Add(sparse);
+                _flagContextDB.SaveChanges();
             }
 
             //Prefixes
             foreach (var item in ScriptSql.DicoPrefixes)
             {
                 Prefixe prefixe = new Prefixe();
-                //remplir
-            }
+                prefixe.Flag = item.Value;
+
+                _flagContextDB.Prefixes.Add(prefixe);
+                _flagContextDB.SaveChanges();
+            }*/
         }
     }
     //Liste de toutes les options possible

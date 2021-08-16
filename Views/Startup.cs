@@ -120,9 +120,6 @@ namespace Views
             //Sparse
             services.AddTransient<ISparseOption, SparseRepository>();
             services.AddTransient<ISparseBusiness, SparseBusiness>();
-
-            //AddinDb
-            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -131,8 +128,8 @@ namespace Views
             context.Database.Migrate();
 
             //Test Addin Db at start
-            SeedRepository seedRepository = new SeedRepository(context);
-            seedRepository.AddDicoInDB();
+            /*SeedRepository seedRepository = new SeedRepository(context);
+            seedRepository.AddDicoInDB();*/
 
             //if (env.IsDevelopment())
             //{

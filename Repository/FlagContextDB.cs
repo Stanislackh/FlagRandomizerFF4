@@ -32,24 +32,26 @@ namespace Repository
 
         // Entites
         public virtual DbSet<Boss> Bosses { get; set; }
-        public virtual DbSet<CharacterRandom> Characters { get; set; }
+        public virtual DbSet<CharacterRandom> CharacterRandoms { get; set; }
         public virtual DbSet<CharacterSpell> CharacterSpells { get; set; }
         public virtual DbSet<CharacterStart> CharacterStarts { get; set; }
         public virtual DbSet<Chest> Chests { get; set; }
         public virtual DbSet<EncounterDrop> EncounterDrops { get; set; }
-        public virtual DbSet<EncounterToggle> Encounters { get; set; }
+        public virtual DbSet<EncounterToggle> EncounterToggles { get; set; }
         public virtual DbSet<Glitch> Glitches { get; set; }
         public virtual DbSet<ItemKey> ItemKeys { get; set; }
         public virtual DbSet<Junk> Junks { get; set; }
         public virtual DbSet<ObjectiveCustom> ObjectiveCustoms { get; set; }
-        public virtual DbSet<ObjectiveMode> Objectives { get; set; }
+        public virtual DbSet<ObjectiveMode> ObjectiveModes { get; set; }
         public virtual DbSet<Other> Others { get; set; }
         public virtual DbSet<OtherStarter> OtherStarters { get; set; }
         public virtual DbSet<Pass> Passes { get; set; }
         public virtual DbSet<Permadeath> Permadeaths { get; set; }
+        public virtual DbSet<Prefixe> Prefixes { get; set; }
         public virtual DbSet<PresetFlag> PresetFlags { get; set; }
         public virtual DbSet<Seed> Seeds { get; set; }
         public virtual DbSet<Shop> Shops { get; set; }
         public virtual DbSet<Sparse> Sparses { get; set; }
+        
     }
 }
